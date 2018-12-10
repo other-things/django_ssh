@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </head>
+
+    <body>
+        
+        <div class="container">
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="/home">Web-ssh</a>
+            </nav>
+        
+            <div class="container">
+
+                <div class="input-group">
+                        &nbsp;
+                </div>
+
+                <h1>Process usage</h1>
+
+                <table class="table">
+                        
+                    <thead class="thead-dark">
+                        <tr>
+                        {% for header_value in header %}
+                            <th scope="col">{{ header_value }}</th>
+                        {% endfor %}
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for row_data in values %}
+                            <tr>
+                                {% for value in row_data %}
+                                    <td>{{ value }}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+
+    </body>
+
+</html>
